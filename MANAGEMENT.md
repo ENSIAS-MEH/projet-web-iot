@@ -46,7 +46,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | ID | Task | Assigned To | Branch | Status |
 |----|------|-------------|--------|--------|
 | T001 | Project Setup | - | setup | ✅ DONE |
-| T002 | Database Schema | - | db-schema | ⬜ TODO |
+| T002 | Database Schema | - | db-schema | ✅ DONE |
 | T003 | Spring Boot Setup | - | spring-init | ⬜ TODO |
 | T004 | Sensor API | - | sensor-api | ⬜ TODO |
 | T005 | Readings API | - | readings-api | ⬜ TODO |
@@ -99,14 +99,14 @@ cold-room-monitoring/
 #### T002: Database Schema
 **Assigned**: -  
 **Branch**: `db-schema`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Install MySQL locally
-- [ ] Create database `cold_room_db`
-- [ ] Create SQL script for tables
-- [ ] Add sample data (4 sensors)
-- [ ] Test database connection
+- [x] Install MySQL locally
+- [x] Create database `cold_room_db`
+- [x] Create SQL script for tables
+- [x] Add sample data (4 sensors)
+- [x] Test database connection
 
 **Tables to create:**
 
