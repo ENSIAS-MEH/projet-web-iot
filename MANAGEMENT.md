@@ -45,7 +45,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 
 | ID | Task | Assigned To | Branch | Status |
 |----|------|-------------|--------|--------|
-| T001 | Project Setup | - | setup | ⬜ TODO |
+| T001 | Project Setup | - | setup | ✅ DONE |
 | T002 | Database Schema | - | db-schema | ⬜ TODO |
 | T003 | Spring Boot Setup | - | spring-init | ⬜ TODO |
 | T004 | Sensor API | - | sensor-api | ⬜ TODO |
@@ -75,7 +75,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 #### T001: Project Setup
 **Assigned**: -  
 **Branch**: `setup`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
 - [x] Create GitHub repository
