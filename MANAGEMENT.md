@@ -47,7 +47,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 |----|------|-------------|--------|--------|
 | T001 | Project Setup | - | setup | ✅ DONE |
 | T002 | Database Schema | - | db-schema | ✅ DONE |
-| T003 | Spring Boot Setup | - | spring-init | ⬜ TODO |
+| T003 | Spring Boot Setup | - | spring-init | ✅ DONE |
 | T004 | Sensor API | - | sensor-api | ⬜ TODO |
 | T005 | Readings API | - | readings-api | ⬜ TODO |
 | T006 | Alerts API | - | alerts-api | ⬜ TODO |
@@ -161,15 +161,15 @@ cold-room-monitoring/
 #### T003: Spring Boot Setup
 **Assigned**: -  
 **Branch**: `spring-init`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Create Spring Boot project (Spring Initializr)
-- [ ] Add dependencies (Web, JPA, MySQL, Lombok)
-- [ ] Configure application.properties
-- [ ] Create entity classes (Sensor, SensorReading, Alert)
-- [ ] Test database connection
-- [ ] Create health check endpoint
+- [x] Create Spring Boot project (Spring Initializr)
+- [x] Add dependencies (Web, JPA, MySQL, Lombok)
+- [x] Configure application.properties
+- [x] Create entity classes (Sensor, SensorReading, Alert)
+- [x] Test database connection
+- [x] Create health check endpoint
 
 **Dependencies needed:**
 - Spring Web
