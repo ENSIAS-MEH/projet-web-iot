@@ -48,7 +48,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T001 | Project Setup | - | setup | ✅ DONE |
 | T002 | Database Schema | - | db-schema | ✅ DONE |
 | T003 | Spring Boot Setup | - | spring-init | ✅ DONE |
-| T004 | Sensor API | - | sensor-api | ⬜ TODO |
+| T004 | Sensor API | - | sensor-api | ✅ DONE |
 | T005 | Readings API | - | readings-api | ⬜ TODO |
 | T006 | Alerts API | - | alerts-api | ⬜ TODO |
 | T007 | Frontend Structure | - | frontend-base | ⬜ TODO |
@@ -208,11 +208,11 @@ server.port=8080
 **Status**: ⬜ TODO
 
 **What to do:**
-- [ ] Create SensorRepository
-- [ ] Create SensorService
-- [ ] Create SensorController
-- [ ] Implement CRUD operations
-- [ ] Test with Postman
+- [x] Create SensorRepository
+- [x] Create SensorService
+- [x] Create SensorController
+- [x] Implement CRUD operations
+- [x] Test with Postman
 
 **Endpoints:**
 - `GET /api/sensors` - Get all sensors
