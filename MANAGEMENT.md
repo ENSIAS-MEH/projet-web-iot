@@ -49,7 +49,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T002 | Database Schema | - | db-schema | ✅ DONE |
 | T003 | Spring Boot Setup | - | spring-init | ✅ DONE |
 | T004 | Sensor API | - | sensor-api | ✅ DONE |
-| T005 | Readings API | - | readings-api | ⬜ TODO |
+| T005 | Readings API | - | readings-api | ✅ DONE |
 | T006 | Alerts API | - | alerts-api | ⬜ TODO |
 | T007 | Frontend Structure | - | frontend-base | ⬜ TODO |
 | T008 | Dashboard Page | - | dashboard | ⬜ TODO |
@@ -246,11 +246,11 @@ server.port=8080
 **Status**: ⬜ TODO
 
 **What to do:**
-- [ ] Create SensorReadingRepository
-- [ ] Create SensorReadingService
-- [ ] Create SensorReadingController
-- [ ] Implement anomaly detection logic
-- [ ] Test with Postman
+- [x] Create SensorReadingRepository
+- [x] Create SensorReadingService
+- [x] Create SensorReadingController
+- [x] Implement anomaly detection logic
+- [x] Test with Postman
 
 **Endpoints:**
 - `POST /api/readings` - Add new reading (from simulator)
