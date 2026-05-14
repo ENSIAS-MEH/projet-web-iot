@@ -50,7 +50,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T003 | Spring Boot Setup | - | spring-init | ✅ DONE |
 | T004 | Sensor API | - | sensor-api | ✅ DONE |
 | T005 | Readings API | - | readings-api | ✅ DONE |
-| T006 | Alerts API | - | alerts-api | ⬜ TODO |
+| T006 | Alerts API | - | alerts-api | ✅ DONE |
 | T007 | Frontend Structure | - | frontend-base | ⬜ TODO |
 | T008 | Dashboard Page | - | dashboard | ⬜ TODO |
 | T009 | Alerts Page | - | alerts-page | ⬜ TODO |
@@ -280,14 +280,14 @@ POST /api/readings
 #### T006: Alerts API
 **Assigned**: -  
 **Branch**: `alerts-api`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Create AlertRepository
-- [ ] Create AlertService
-- [ ] Create AlertController
-- [ ] Implement resolve alert functionality
-- [ ] Test with Postman
+- [x] Create AlertRepository
+- [x] Create AlertService
+- [x] Create AlertController
+- [x] Implement resolve alert functionality
+- [x] Test with Postman
 
 **Endpoints:**
 - `GET /api/alerts` - Get all alerts
