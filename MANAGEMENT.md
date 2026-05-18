@@ -51,7 +51,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T004 | Sensor API | - | sensor-api | ✅ DONE |
 | T005 | Readings API | - | readings-api | ✅ DONE |
 | T006 | Alerts API | - | alerts-api | ✅ DONE |
-| T007 | Frontend Structure | - | frontend-base | ⬜ TODO |
+| T007 | Frontend Structure | - | frontend-base | ✅ DONE |
 | T008 | Dashboard Page | - | dashboard | ⬜ TODO |
 | T009 | Alerts Page | - | alerts-page | ⬜ TODO |
 | T010 | Settings Page | - | settings-page | ⬜ TODO
@@ -319,14 +319,14 @@ POST /api/readings
 #### T007: Frontend Structure
 **Assigned**: -  
 **Branch**: `frontend-base`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Create HTML files (index.html, alerts.html, settings.html)
-- [ ] Create CSS files (global styles, variables)
-- [ ] Create JS files (api.js, utils.js)
-- [ ] Add navigation bar
-- [ ] Make it responsive
+- [x] Create HTML files (index.html, alerts.html, settings.html)
+- [x] Create CSS files (global styles, variables)
+- [x] Create JS files (api.js, utils.js)
+- [x] Add navigation bar
+- [x] Make it responsive
 
 **Files to create:**
 ```
