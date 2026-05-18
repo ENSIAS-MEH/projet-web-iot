@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cold Room Monitoring System — Real-time sensor dashboard" />
+  <title>Dashboard — Cold Room Monitor</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Chart.js (loaded here so dashboard.js can use it) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand -->
+      <a href="index.html" class="navbar-brand" aria-label="Cold Room Monitor home">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.75" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4
+               M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+        </svg>
+        <span>Cold Room Monitor</span>
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false"
+              aria-controls="navbar-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Nav links -->
+      <ul class="navbar-nav" id="navbar-nav" role="list">
+        <li>
+          <a href="index.html" class="nav-link" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="alerts.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+            </svg>
+            Alerts
+          </a>
+        </li>
+        <li>
+          <a href="settings.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06
+                   a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0
+                   008.1 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0
+                   003.78 15a1.65 1.65 0 00-1.51-1H2a2 2 0 010-4h.09A1.65 1.65 0 004.6 8.1a1.65 1.65
+                   0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 3.78a1.65 1.65 0
+                   001-1.51V2a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2
+                   2 0 012.83 2.83l-.06.06A1.65 1.65 0 0020.22 9a1.65 1.65 0 001.51 1H22a2 2 0 010
+                   4h-.09a1.65 1.65 0 00-1.51 1z"/>
+            </svg>
+            Settings
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ── Main content ── -->
+  <main class="page-content" id="main-content">
+    <div class="container">
+
+      <!-- Page header -->
+      <header class="page-header">
+        <h1>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </h1>
+        <p>Real-time sensor readings from the cold room</p>
+      </header>
+
+      <!-- Sensor cards grid — populated by dashboard.js (T008) -->
+      <section aria-label="Sensor readings">
+        <div id="sensor-grid" class="sensor-grid" role="list"
+             aria-live="polite" aria-label="Sensor status cards">
+          <!-- Cards injected by dashboard.js -->
+          <div class="loading-state" role="status">
+            <div class="spinner" aria-hidden="true"></div>
+            <span>Loading sensors...</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Charts section — populated by dashboard.js (T008) -->
+      <section aria-label="Sensor history charts" style="margin-top: 2rem;">
+        <div id="charts-section">
+          <!-- Charts injected by dashboard.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Toast container -->
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
