@@ -205,7 +205,7 @@ server.port=8080
 #### T004: Sensor API
 **Assigned**: -  
 **Branch**: `sensor-api`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
 - [x] Create SensorRepository

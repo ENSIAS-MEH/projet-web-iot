@@ -21,9 +21,7 @@ public class SensorService {
 
     private final SensorRepository sensorRepository;
 
-    // ----------------------------------------------------------------
-    // READ
-    // ----------------------------------------------------------------
+    // ── Read ────────────────────────────────────────────────
 
     /** Returns all sensors. */
     public List<SensorDTO> getAllSensors() {
@@ -46,9 +44,7 @@ public class SensorService {
         return toDTO(findOrThrow(id));
     }
 
-    // ----------------------------------------------------------------
-    // WRITE
-    // ----------------------------------------------------------------
+    // ── Write ───────────────────────────────────────────────
 
     /** Creates a new sensor. */
     @Transactional
@@ -87,11 +83,9 @@ public class SensorService {
         sensorRepository.deleteById(id);
     }
 
-    // ----------------------------------------------------------------
-    // HELPERS
-    // ----------------------------------------------------------------
+    // ── Helpers ─────────────────────────────────────────────
 
-    private Sensor findOrThrow(Integer id) {
+    public Sensor findOrThrow(Integer id) {
         return sensorRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Sensor not found with id: " + id));
     }
@@ -103,9 +97,7 @@ public class SensorService {
         }
     }
 
-    // ----------------------------------------------------------------
-    // MAPPING
-    // ----------------------------------------------------------------
+    // ── Mapping ─────────────────────────────────────────────
 
     public SensorDTO toDTO(Sensor sensor) {
         return SensorDTO.builder()
