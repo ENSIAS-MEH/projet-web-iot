@@ -517,3 +517,185 @@ button { font-family: var(--font); cursor: pointer; }
   white-space: nowrap;
   border: 0;
 }
+
+/* ============================================================
+   Dashboard — Sensor Cards  (T008)
+   ============================================================ */
+
+/* Grid wrapper */
+.sensor-grid {
+  display: grid;
+  gap: 1.5rem;
+  /* column counts set in responsive.css */
+}
+
+/* Card base */
+.sensor-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.sensor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Status colour variants */
+.sensor-card--ok       { border-left: 4px solid var(--success-color); }
+.sensor-card--warning  { border-left: 4px solid var(--warning-color); }
+.sensor-card--critical { border-left: 4px solid var(--danger-color);  }
+.sensor-card--inactive { border-left: 4px solid var(--text-muted);    }
+
+/* Header row: icon + badge */
+.sensor-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Icon circle */
+.sensor-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sensor-card__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon colour per type */
+.sensor-card__icon--temperature { background: #dbeafe; color: #2563eb; }
+.sensor-card__icon--humidity    { background: #cffafe; color: #0891b2; }
+.sensor-card__icon--door        { background: #d1fae5; color: #059669; }
+.sensor-card__icon--pressure    { background: #ede9fe; color: #7c3aed; }
+.sensor-card__icon--default     { background: #f1f5f9; color: #64748b; }
+
+/* Body */
+.sensor-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Big value */
+.sensor-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.sensor-unit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.sensor-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sensor-location {
+  font-size: 0.8125rem;
+}
+
+/* Footer */
+.sensor-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.sensor-card__footer svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Dashboard — Charts  (T008)
+   ============================================================ */
+
+/* Range selector bar */
+.chart-range-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chart-range-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-right: 0.25rem;
+}
+
+.btn-range {
+  min-width: 52px;
+  justify-content: center;
+}
+
+.btn-range--active {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
+.btn-range--active:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Chart card */
+.chart-card .card-header h2 {
+  font-size: 0.9375rem;
+}
+
+.chart-icon {
+  display: inline-flex;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  color: var(--primary-color);
+}
+
+.chart-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Canvas wrapper — keeps chart from growing unbounded */
+.chart-wrapper {
+  position: relative;
+  height: 240px;
+}
+
+.chart-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
