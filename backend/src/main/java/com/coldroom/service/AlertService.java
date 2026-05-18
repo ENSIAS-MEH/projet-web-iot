@@ -3,6 +3,7 @@ package com.coldroom.service;
 import com.coldroom.dto.AlertDTO;
 import com.coldroom.entity.Alert;
 import com.coldroom.repository.AlertRepository;
+import com.coldroom.repository.SensorRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,9 +17,8 @@ import java.util.stream.Collectors;
 /**
  * Business logic for alert management.
  *
- * <p>Alerts are created automatically by {@link SensorReadingService} during
- * anomaly detection.  This service exposes read operations and the ability
- * to resolve (acknowledge) an alert.</p>
+ * Alerts are created automatically by {@link SensorReadingService} during
+ * anomaly detection. This service handles reading and resolving them.
  */
 @Slf4j
 @Service
@@ -27,14 +27,13 @@ import java.util.stream.Collectors;
 public class AlertService {
 
     private final AlertRepository alertRepository;
+    private final SensorRepository sensorRepository;
 
     // ----------------------------------------------------------------
     // READ
     // ----------------------------------------------------------------
 
-    /**
-     * Returns all alerts ordered by creation time descending.
-     */
+    /** Returns all alerts, newest first. */
     public List<AlertDTO> getAllAlerts() {
         return alertRepository.findAllByOrderByCreatedAtDesc()
                 .stream()
@@ -42,9 +41,7 @@ public class AlertService {
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Returns only unresolved (active) alerts, newest first.
-     */
+    /** Returns only unresolved (active) alerts, newest first. */
     public List<AlertDTO> getActiveAlerts() {
         return alertRepository.findByIsResolvedFalseOrderByCreatedAtDesc()
                 .stream()
@@ -52,34 +49,18 @@ public class AlertService {
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Returns a single alert by ID, or throws 404.
-     */
+    /** Returns a single alert by ID, or throws 404. */
     public AlertDTO getAlertById(Long id) {
         return toDTO(findOrThrow(id));
     }
 
-    /**
-     * Returns all alerts for a specific sensor, newest first.
-     */
+    /** Returns all alerts for a specific sensor, newest first. */
     public List<AlertDTO> getAlertsBySensor(Integer sensorId) {
+        if (!sensorRepository.existsById(sensorId)) {
+            throw new EntityNotFoundException("Sensor not found with id: " + sensorId);
+        }
         return alertRepository.findBySensorIdOrderByCreatedAtDesc(sensorId)
                 .stream()
-                .map(this::toDTO)
-                .collect(Collectors.toList());
-    }
-
-    /**
-     * Returns alerts filtered by resolved status and/or severity.
-     *
-     * @param isResolved filter by resolved status (null = no filter)
-     * @param severity   filter by severity string (null = no filter)
-     */
-    public List<AlertDTO> getFilteredAlerts(Boolean isResolved, String severity) {
-        return alertRepository.findAllByOrderByCreatedAtDesc()
-                .stream()
-                .filter(a -> isResolved == null || a.getIsResolved().equals(isResolved))
-                .filter(a -> severity   == null || a.getSeverity().equalsIgnoreCase(severity))
                 .map(this::toDTO)
                 .collect(Collectors.toList());
     }

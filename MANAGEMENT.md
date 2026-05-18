@@ -53,7 +53,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T006 | Alerts API | - | alerts-api | ✅ DONE |
 | T007 | Frontend Structure | - | frontend-base | ✅ DONE |
 | T008 | Dashboard Page | - | dashboard | ✅ DONE |
-| T009 | Alerts Page | - | alerts-page | ⬜ TODO |
+| T009 | Alerts Page | - | alerts-page | ✅ DONE |
 | T010 | Settings Page | - | settings-page | ⬜ TODO
  |
 | T011 | API Integration | - | api-connect | ⬜ TODO |
@@ -462,12 +462,12 @@ frontend/
 **Status**: ⬜ TODO
 
 **What to do:**
-- [ ] Create alerts table/list
-- [ ] Add filter buttons (All, Active, Resolved)
-- [ ] Add severity filter (Critical, Warning, Info)
-- [ ] Add "Resolve" button for each alert
-- [ ] Color-code by severity
-- [ ] Make it responsive (cards on mobile)
+- [x] Create alerts table/list
+- [x] Add filter buttons (All, Active, Resolved)
+- [x] Add severity filter (Critical, Warning, Info)
+- [x] Add "Resolve" button for each alert
+- [x] Color-code by severity
+- [x] Make it responsive (cards on mobile)
 
 **Alerts Page Layout:**
 
