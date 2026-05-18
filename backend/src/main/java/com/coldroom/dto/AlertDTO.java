@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 /**
  * Data Transfer Object for {@link com.coldroom.entity.Alert}.
- * Used for response payloads.
+ * Used for response payloads (alerts are created internally by anomaly detection).
  */
 @Getter
 @Setter
@@ -20,7 +20,7 @@ public class AlertDTO {
     /** ID of the sensor that triggered this alert. */
     private Integer sensorId;
 
-    /** Name of the sensor – for display purposes. */
+    /** Human-readable sensor name. */
     private String sensorName;
 
     /** ID of the reading that caused this alert. */
@@ -38,8 +38,9 @@ public class AlertDTO {
     /** Whether the alert has been acknowledged and resolved. */
     private Boolean isResolved;
 
+    /** When the alert was created. */
     private LocalDateTime createdAt;
 
-    /** Null if the alert is still active. */
+    /** When the alert was resolved; null if still active. */
     private LocalDateTime resolvedAt;
 }

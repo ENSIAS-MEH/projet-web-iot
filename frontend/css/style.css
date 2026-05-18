@@ -699,3 +699,121 @@ button { font-family: var(--font); cursor: pointer; }
   width: 100% !important;
   height: 100% !important;
 }
+
+/* ============================================================
+   Alerts Page — Alert Cards  (T009)
+   ============================================================ */
+
+/* Filters bar */
+.filters-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Alert card base */
+.alert-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  border-left-width: 4px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.alert-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Severity left-border colours */
+.alert-card--critical { border-left-color: var(--danger-color); }
+.alert-card--warning  { border-left-color: var(--warning-color); }
+.alert-card--info     { border-left-color: var(--info-color); }
+
+/* Resolved: muted */
+.alert-card--resolved {
+  border-left-color: var(--text-muted);
+  opacity: 0.75;
+}
+
+/* Header row: icon + badge */
+.alert-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* Severity icon circle */
+.alert-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.alert-card__icon svg { width: 20px; height: 20px; }
+
+.alert-card__icon--critical { background: var(--danger-light);  color: var(--danger-color); }
+.alert-card__icon--warning  { background: var(--warning-light); color: var(--warning-color); }
+.alert-card__icon--info     { background: var(--info-light);    color: var(--info-color); }
+
+.alert-card__badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Body */
+.alert-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alert-card__message {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.alert-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.alert-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Footer: resolve button + resolved timestamp */
+.alert-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
