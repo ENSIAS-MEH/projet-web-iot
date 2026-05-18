@@ -52,7 +52,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T005 | Readings API | - | readings-api | ✅ DONE |
 | T006 | Alerts API | - | alerts-api | ✅ DONE |
 | T007 | Frontend Structure | - | frontend-base | ✅ DONE |
-| T008 | Dashboard Page | - | dashboard | ⬜ TODO |
+| T008 | Dashboard Page | - | dashboard | ✅ DONE |
 | T009 | Alerts Page | - | alerts-page | ⬜ TODO |
 | T010 | Settings Page | - | settings-page | ⬜ TODO
  |
@@ -391,16 +391,16 @@ frontend/
 #### T008: Dashboard Page
 **Assigned**: -  
 **Branch**: `dashboard`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Create sensor cards layout (grid)
-- [ ] Display current sensor values
-- [ ] Add color indicators (green=ok, red=alert)
-- [ ] Create charts section
-- [ ] Integrate Chart.js for graphs
-- [ ] Add time range selector (1h, 24h, 7d)
-- [ ] Make it auto-refresh every 10 seconds
+- [x] Create sensor cards layout (grid)
+- [x] Display current sensor values
+- [x] Add color indicators (green=ok, red=alert)
+- [x] Create charts section
+- [x] Integrate Chart.js for graphs
+- [x] Add time range selector (1h, 24h, 7d)
+- [x] Make it auto-refresh every 10 seconds
 
 **Dashboard Layout:**
 
