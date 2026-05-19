@@ -817,3 +817,129 @@ button { font-family: var(--font); cursor: pointer; }
   border-top: 1px solid var(--border-color);
   flex-wrap: wrap;
 }
+
+/* ============================================================
+   Settings Page  (T010)
+   ============================================================ */
+
+/* Grid: 1 col mobile → 2 col tablet → 2 col desktop (cards are wide) */
+.settings-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .settings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Settings card */
+.settings-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-card .card-header {
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.settings-card .card-header h2 {
+  gap: 0.625rem;
+  font-size: 1rem;
+}
+
+.settings-card .card-header h2 .sensor-card__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.settings-card .card-header h2 .sensor-card__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Threshold inputs side-by-side */
+.settings-thresholds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 400px) {
+  .settings-thresholds {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Input with unit suffix */
+.input-with-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-unit .form-control {
+  padding-right: 3rem;
+}
+
+.input-unit {
+  position: absolute;
+  right: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Validation error box */
+.settings-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  background: var(--danger-light);
+  border: 1px solid #fca5a5;
+  border-radius: var(--border-radius);
+  color: var(--danger-color);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.settings-error svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Input error highlight */
+.form-control.input-error {
+  border-color: var(--danger-color);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* Save button row */
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.5rem;
+}
+
+/* Spinning icon on save button while loading */
+@keyframes iconSpin {
+  to { transform: rotate(360deg); }
+}
+
+.spin-icon {
+  animation: iconSpin 0.8s linear infinite;
+}
