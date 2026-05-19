@@ -55,7 +55,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T008 | Dashboard Page | - | dashboard | ✅ DONE |
 | T009 | Alerts Page | - | alerts-page | ✅ DONE |
 | T010 | Settings Page | - | settings-page | ✅ DONE |
-| T011 | API Integration | - | api-connect | ⬜ TODO |
+| T011 | API Integration | - | api-connect | ✅ DONE |
 | T012 | Simulator Script | - | simulator | ⬜ TODO |
 | T013 | Testing & Fixes | - | testing | ⬜ TODO |
 
@@ -592,15 +592,15 @@ frontend/
 #### T011: API Integration
 **Assigned**: -  
 **Branch**: `api-connect`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Create api.js with all API functions
-- [ ] Connect dashboard to backend
-- [ ] Connect alerts page to backend
-- [ ] Connect settings page to backend
-- [ ] Handle errors gracefully
-- [ ] Add loading indicators
+- [x] Create api.js with all API functions
+- [x] Connect dashboard to backend
+- [x] Connect alerts page to backend
+- [x] Connect settings page to backend
+- [x] Handle errors gracefully
+- [x] Add loading indicators
 
 **api.js Functions:**
 ```javascript
