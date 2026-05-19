@@ -56,7 +56,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T009 | Alerts Page | - | alerts-page | ✅ DONE |
 | T010 | Settings Page | - | settings-page | ✅ DONE |
 | T011 | API Integration | - | api-connect | ✅ DONE |
-| T012 | Simulator Script | - | simulator | ⬜ TODO |
+| T012 | Simulator Script | - | simulator | ✅ DONE |
 | T013 | Testing & Fixes | - | testing | ⬜ TODO |
 
 **Status Legend:**
@@ -629,14 +629,14 @@ async function resolveAlert(id)
 #### T012: Simulator Script
 **Assigned**: -  
 **Branch**: `simulator`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Create Python script to simulate sensors
-- [ ] Generate realistic data
-- [ ] Send data to backend API every 10 seconds
-- [ ] Include occasional anomalies (5% of time)
-- [ ] Add README with instructions
+- [x] Create Python script to simulate sensors
+- [x] Generate realistic data
+- [x] Send data to backend API every 10 seconds
+- [x] Include occasional anomalies (5% of time)
+- [x] Add README with instructions
 
 **Simulator Features:**
 - Temperature: -18°C ± 2°C (normal), occasionally -10°C (anomaly)
