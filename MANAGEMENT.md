@@ -54,8 +54,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T007 | Frontend Structure | - | frontend-base | ✅ DONE |
 | T008 | Dashboard Page | - | dashboard | ✅ DONE |
 | T009 | Alerts Page | - | alerts-page | ✅ DONE |
-| T010 | Settings Page | - | settings-page | ⬜ TODO
- |
+| T010 | Settings Page | - | settings-page | ✅ DONE |
 | T011 | API Integration | - | api-connect | ⬜ TODO |
 | T012 | Simulator Script | - | simulator | ⬜ TODO |
 | T013 | Testing & Fixes | - | testing | ⬜ TODO |
@@ -527,15 +526,15 @@ frontend/
 #### T010: Settings Page
 **Assigned**: -  
 **Branch**: `settings-page`  
-**Status**: ⬜ TODO
+**Status**: ✅ DONE
 
 **What to do:**
-- [ ] Create form for each sensor
-- [ ] Load current threshold values
-- [ ] Allow editing min/max thresholds
-- [ ] Add save button
-- [ ] Show success/error messages
-- [ ] Add enable/disable toggle for sensors
+- [x] Create form for each sensor
+- [x] Load current threshold values
+- [x] Allow editing min/max thresholds
+- [x] Add save button
+- [x] Show success/error messages
+- [x] Add enable/disable toggle for sensors
 
 **Settings Page Layout:**
 
