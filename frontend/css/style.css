@@ -560,6 +560,13 @@ button { font-family: var(--font); cursor: pointer; }
   justify-content: space-between;
 }
 
+/* Status badge inside sensor card header */
+.sensor-card__status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 /* Icon circle */
 .sensor-card__icon {
   width: 44px;

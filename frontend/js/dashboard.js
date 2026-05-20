@@ -417,7 +417,7 @@ async function init() {
   if (grid) utils.showLoading(grid, 'Loading sensors...');
 
   try {
-    sensors = await api.getAllSensors();
+    sensors = await api.getActiveSensors();
   } catch (err) {
     console.error('Failed to load sensors:', err);
     if (grid) utils.showEmpty(grid, 'Could not connect to the backend. Is the server running on port 8080?');

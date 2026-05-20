@@ -57,7 +57,7 @@ Build a **Cold Room Monitoring System** that works on **localhost** with real-ti
 | T010 | Settings Page | - | settings-page | ✅ DONE |
 | T011 | API Integration | - | api-connect | ✅ DONE |
 | T012 | Simulator Script | - | simulator | ✅ DONE |
-| T013 | Testing & Fixes | - | testing | ⬜ TODO |
+| T013 | Testing & Fixes | - | testing | ✅ DONE |
 
 **Status Legend:**
 - ⬜ TODO - Not started
@@ -657,11 +657,11 @@ async function resolveAlert(id)
 **Status**: ⬜ TODO
 
 **What to do:**
-- [ ] Test all API endpoints
-- [ ] Test frontend on different devices
-- [ ] Test with simulator running
-- [ ] Fix any bugs found
-- [ ] Update documentation
+- [x] Test all API endpoints
+- [x] Test frontend on different devices
+- [x] Test with simulator running
+- [x] Fix any bugs found
+- [x] Update documentation
 
 **Testing Checklist:**
 - ✅ All sensors display correctly
