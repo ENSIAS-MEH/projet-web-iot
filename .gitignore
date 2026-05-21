@@ -1,0 +1,58 @@
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+.mvn/
+mvnw
+mvnw.cmd
+
+# Spring Boot
+application-local.properties
+application-secret.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.env
+venv/
+env/
+.venv/
+
+# Node (if used)
+node_modules/
+npm-debug.log*
+
+# Database
+*.sql.bak
+
+# Logs
+logs/
+*.log
+
+# Secrets
+*.env
+secrets.properties
