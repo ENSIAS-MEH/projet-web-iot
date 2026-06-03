@@ -319,6 +319,7 @@ function renderChart(sensor, readings) {
       options: {
         responsive: true,
         maintainAspectRatio: true,
+        aspectRatio: 2.5,          // width:height — works on all screen sizes
         interaction: { mode: 'index', intersect: false },
         plugins: {
           legend: {
@@ -346,6 +347,7 @@ function renderChart(sensor, readings) {
               font: { size: 11 },
               maxTicksLimit: 8,
               maxRotation: 0,
+              autoSkip: true,
             },
             grid: { color: 'rgba(226,232,240,0.6)' },
           },

@@ -683,6 +683,10 @@ button { font-family: var(--font); cursor: pointer; }
   font-size: 0.9375rem;
 }
 
+.chart-card .card-body {
+  padding: 1.25rem;
+}
+
 .chart-icon {
   display: inline-flex;
   align-items: center;
@@ -696,15 +700,16 @@ button { font-family: var(--font); cursor: pointer; }
   height: 18px;
 }
 
-/* Canvas wrapper — keeps chart from growing unbounded */
+/* Canvas wrapper — let Chart.js control sizing via aspect ratio */
 .chart-wrapper {
   position: relative;
-  height: 240px;
+  width: 100%;
+  /* No fixed height — Chart.js maintainAspectRatio handles it */
 }
 
 .chart-wrapper canvas {
-  width: 100% !important;
-  height: 100% !important;
+  display: block;
+  max-width: 100%;
 }
 
 /* ============================================================

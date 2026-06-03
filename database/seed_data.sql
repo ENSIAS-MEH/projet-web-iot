@@ -12,7 +12,7 @@ INSERT INTO sensors (name, sensor_type, unit, location, min_threshold, max_thres
 VALUES
     ('Temperature Sensor', 'temperature', '°C',      'Main Chamber', -25.00, -15.00, TRUE),
     ('Humidity Sensor',    'humidity',    '%',        'Main Chamber',  40.00,  60.00, TRUE),
-    ('Door Sensor',        'door',        'boolean',  'Main Chamber',   0.00,   0.00, TRUE),
+    ('Door Sensor',        'door',        'boolean',  'Main Chamber',   0.00,   1.00, TRUE),
     ('Pressure Sensor',    'pressure',    'hPa',      'Main Chamber', 1000.00, 1020.00, TRUE);
 
 -- ------------------------------------------------------------

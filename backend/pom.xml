@@ -62,11 +62,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- H2 in-memory database for tests (no MySQL required in CI) -->
+        <!-- H2 in-memory database (no setup needed!) -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
